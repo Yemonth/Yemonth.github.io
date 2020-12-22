@@ -23,6 +23,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+/*
+body {
+    line-height: 1;
+	background: url(.png) center center no-repeat fixed;
+	background-size:cover;
+	background-blend-mode: darken;
+	background-color:rgba(0,0,0,0.4);
+} */
 
 body{
 	max-width:100%;
