@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>布袋</title>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" href="gate.css"> -->
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body{
+	margin:0;
+	background-color:black;
+	max-width;100%;
+	max-height:100%;
+}
+.i1{
+	display:none;
+	position:absolute;
+	width:50%;
+	height:50%;
+	left:-50%;
+	top:-50%;
+	z-index:4;
+	-webkit-transition: all 2s;
+	transition: all 2s;  
+}
+.i2{
+	display:none;
+	position:absolute;
+	width:50%;
+	height:50%;
+	left:50%;
+	top:-50%;
+	z-index:3;
+	-webkit-transition: all 2s;
+	transition: all 2s;
+}
+.i3{
+	display:none;
+	position:absolute;
+	width:50%;
+	height:50%;
+	left:-20%;
+	top:-20%;
+	z-index:2;
+	-webkit-transition: all 2s;
+	transition: all 2s;  
+}
+.i4{
+	display:none;
+	position:absolute;
+	width:50%;
+	height:50%;
+	left:20%;
+	top:-10%;
+	z-index:1;
+	-webkit-transition: all 2s;
+	transition: all 2s;  
+}
+.bt{
+	z-index:10;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	top:60%;
+	font-size:2rem;
+	font-weight:bold;
+	width:8rem;
+	height:4rem;
+	background:linear-gradient(gray, white, gray);
+	border:0;
+	border-radius:10px;
+	display:none;
+	transition:opacity 1s;
+	opacity:0%;
+}
+.bt:hover{
+	color:#003C9D;
+	border:2px white solid;
+}
+</style>
+</head>
+<body>
+<img src="3d.jpg" class="i1">
+<img src="highheel.jpg" class="i2">
+<img src="濕地.jpg" class="i3">
+<img src="鹽場.jpg" class="i4">
+<script>
+	var px1 = 1;
+	var i1 = document.getElementsByClassName('i1')[0];
+	var i2 = document.getElementsByClassName('i2')[0];
+	var i3 = document.getElementsByClassName('i3')[0];
+	var i4 = document.getElementsByClassName('i4')[0];
+	var bt = document.getElementsByClassName('bt');
+	window.onload=function(){
+		i1.style.display = 'block';
+		setTimeout(function(){
+		i1.style.left="0";
+		i1.style.top="0";
+			i2.style.display = 'block';
+			setTimeout(function(){
+			i2.style.left="50%";
+			i2.style.top="0";
+				i3.style.display = 'block';
+				setTimeout(function(){
+				i3.style.left="0";
+				i3.style.top="50%";
+					i4.style.display = 'block';
+					setTimeout(function(){
+					i4.style.left="50%";
+					i4.style.top="50%";
+						bt[0].style.display = 'block';
+						setTimeout(function(){
+							bt[0].style.opacity="100%";
+							i1.style.filter="blur(3px)";
+							i2.style.filter="blur(3px)";
+							i3.style.filter="blur(3px)";
+							i4.style.filter="blur(3px)";
+						},1000)
+					},1000)
+				},1500)
+			},1500)
+		},1000)
+	}
+</script>
+<input class="bt" type="button" onclick="location.href='#'" value="首頁">
+</body>
+</html>
